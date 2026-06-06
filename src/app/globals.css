@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+@theme {
+  --color-rcb-red: #D92334;
+  --color-rcb-red-dark: #8A111E;
+  --color-rcb-red-glow: rgba(217, 35, 52, 0.4);
+  --color-rcb-gold: #E5A93B;
+  --color-rcb-gold-light: #F6D55C;
+  --color-rcb-gold-dark: #A6731B;
+  --color-rcb-gold-glow: rgba(229, 169, 59, 0.4);
+  --color-rcb-black: #080809;
+  --color-rcb-dark: #121215;
+  --color-rcb-dark-light: #1C1C22;
+  --color-rcb-dark-border: #282830;
+  --color-rcb-text-muted: #9CA3AF;
+  
+  --font-display: var(--font-bebas);
+  --font-permanent: var(--font-permanent);
+  --font-sans: var(--font-inter);
+
+  --animate-gold-glow: gold-glow 3s infinite ease-in-out;
+  --animate-red-glow: red-glow 3s infinite ease-in-out;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes gold-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(229, 169, 59, 0.15), inset 0 0 2px rgba(229, 169, 59, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(229, 169, 59, 0.45), inset 0 0 10px rgba(229, 169, 59, 0.25);
+  }
+}
+
+@keyframes red-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(217, 35, 52, 0.15), inset 0 0 2px rgba(217, 35, 52, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(217, 35, 52, 0.45), inset 0 0 10px rgba(217, 35, 52, 0.25);
+  }
+}
+
+:root {
+  --background: #080809;
+  --foreground: #F3F4F6;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Base Headings Style */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-bebas), sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080809;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #282830;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E5A93B;
+}
+
+/* Custom Utilities for Premium Glassmorphism */
+.glass-panel {
+  background: rgba(18, 18, 21, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.glass-panel-gold {
+  background: rgba(18, 18, 21, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(229, 169, 59, 0.2);
+}
+
+.glass-panel-red {
+  background: rgba(18, 18, 21, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(217, 35, 52, 0.2);
+}
+
+/* Smoky Fiery Backgrounds */
+.fiery-smoke-bg {
+  position: relative;
+  background-color: #060608;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(217, 35, 52, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(229, 169, 59, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.8) 0%, #060608 100%);
+}
+
+.fiery-smoke-overlay {
+  background: linear-gradient(180deg, rgba(6, 6, 8, 0.6) 0%, rgba(217, 35, 52, 0.08) 45%, rgba(6, 6, 8, 0.95) 100%);
+}
+
+/* Text Gradients */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #F6D55C 0%, #E5A93B 50%, #A6731B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-red {
+  background: linear-gradient(135deg, #FFA4A4 0%, #D92334 50%, #8A111E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-red-gold {
+  background: linear-gradient(135deg, #D92334 0%, #E5A93B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Grid overlay background */
+.grid-bg {
+  background-image: radial-gradient(rgba(229, 169, 59, 0.03) 1px, transparent 0),
+                    radial-gradient(rgba(217, 35, 52, 0.03) 1px, transparent 0);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}

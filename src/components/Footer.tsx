@@ -3,10 +3,10 @@ import Link from 'next/link';
 export default function Footer() {
   const officialLinks = [
     { name: 'Official Website', url: 'https://www.royalchallengers.com', icon: '🌐' },
-    { name: 'Instagram', url: 'https://www.instagram.com/royalchallengersbengaluru/', icon: '📸' },
+    { name: 'Instagram', url: 'https://www.instagram.com/royalchallengers.bengaluru?igsh=MXc4cGptczAwZHl1Nw==', icon: '📸' },
     { name: 'X (Twitter)', url: 'https://twitter.com/RCBTweets', icon: '🐦' },
-    { name: 'Facebook', url: 'https://www.facebook.com/RoyalChallengersBengaluru/', icon: '👥' },
-    { name: 'YouTube', url: 'https://www.youtube.com/user/RCBTV', icon: '📺' },
+    { name: 'Facebook', url: 'https://www.facebook.com/RoyalChallengersBangalore', icon: '👥' },
+    { name: 'YouTube', url: 'https://www.youtube.com/@royalchallengersbengaluruYT', icon: '📺' },
     { name: 'IPL Profile', url: 'https://www.iplt20.com/teams/royal-challengers-bengaluru', icon: '🏏' }
   ];
 
